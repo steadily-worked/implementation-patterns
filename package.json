@@ -7,7 +7,9 @@
     "lint": "turbo run lint",
     "format": "turbo run format",
     "check-types": "turbo run check-types",
-    "format-and-lint:fix": "biome format --write . && biome lint . --fix"
+    "lint:fix": "turbo run lint -- --fix",
+    "format-and-lint:fix": "pnpm format && pnpm lint:fix",
+    "ci:check": "pnpm format && pnpm lint && pnpm check-types && pnpm build"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

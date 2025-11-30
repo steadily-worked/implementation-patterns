@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@repo/primitives/button";
+import { Button } from "@repo/primitives/button"
+import type { Meta, StoryObj } from "@storybook/react"
 
 const meta = {
   title: "Primitives/Button",
@@ -21,16 +21,16 @@ const meta = {
     disabled: { control: "boolean" },
     fullWidth: { control: "boolean" },
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
     children: "Button",
   },
-};
+}
 
 export const Variants: Story = {
   render: () => (
@@ -41,7 +41,7 @@ export const Variants: Story = {
       <Button variant="link">Link</Button>
     </div>
   ),
-};
+}
 
 export const Sizes: Story = {
   render: () => (
@@ -52,21 +52,21 @@ export const Sizes: Story = {
       <Button size="lg">Large</Button>
     </div>
   ),
-};
+}
 
 export const Loading: Story = {
   args: {
     children: "Loading...",
     loading: true,
   },
-};
+}
 
 export const Disabled: Story = {
   args: {
     children: "Disabled",
     disabled: true,
   },
-};
+}
 
 export const FullWidth: Story = {
   render: () => (
@@ -74,7 +74,7 @@ export const FullWidth: Story = {
       <Button fullWidth>Full Width Button</Button>
     </div>
   ),
-};
+}
 
 export const WithIcons: Story = {
   render: () => (
@@ -83,11 +83,11 @@ export const WithIcons: Story = {
       <Button rightIcon={<span>→</span>}>Next</Button>
     </div>
   ),
-};
+}
 
 export const CustomClassName: Story = {
   args: {
     children: "Custom Styled",
     className: "bg-purple-500 hover:bg-purple-600",
   },
-};
+}

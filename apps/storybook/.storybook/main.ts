@@ -1,9 +1,9 @@
-import type { StorybookConfig } from "@storybook/react-vite";
-import { dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import { dirname } from "node:path"
+import { fileURLToPath } from "node:url"
+import type { StorybookConfig } from "@storybook/react-vite"
 
 function getAbsolutePath(value: string): string {
-  return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
+  return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)))
 }
 
 const config: StorybookConfig = {
@@ -22,6 +22,6 @@ const config: StorybookConfig = {
       },
     },
   },
-};
+}
 
-export default config;
+export default config
